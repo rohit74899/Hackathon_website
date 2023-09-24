@@ -2,14 +2,14 @@
 import * as React from 'react';
 import { useState  ,useEffect} from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
-
+import Container from '@mui/material/Container'
 
 
 function Dashboard() {
     
 
 
-    const [userInput, setUserInput] = useState('');
+  const [userInput, setUserInput] = useState('');
   const [chartData, setChartData] = useState({ xAxis: [], series: [] });
 
   // Step 2: Handle form submissions to update localStorage
@@ -37,8 +37,8 @@ function Dashboard() {
     return (
       <>
      
-
-     <form onSubmit={handleSubmit}>
+      <Container>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter data (comma-separated)"
@@ -52,8 +52,8 @@ function Dashboard() {
       <BarChart
         xAxis={chartData.xAxis}
         series={chartData.series}
-        width={500}
-        height={300}
+        width={800}
+        height={600}
       />
             {/* <BarChart
             xAxis={[{ scaleType: 'band', data: ['group A', 'group B', 'group C'] }]}
@@ -61,6 +61,8 @@ function Dashboard() {
             width={500}
             height={300}
             /> */}
+      </Container>
+     
  
       </>
         

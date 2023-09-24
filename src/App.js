@@ -8,7 +8,7 @@ import Home from './components/Home'
 import Navbar2 from './components/Navbar2';
 import Dashboard from './components/Dashboard';
 import Navbar3 from './components/Navbar3';
-
+import Products from './components/Products';
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
   const routes = [
     { path: '/', label: 'Home' },
     { path: '/Dashboard', label: 'Dashboard' },
+    { path: '/Products', label: 'Products' },
     
   ];
 
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/Products" element={<Products />} />
           
         </Routes>
       </>
